@@ -6,4 +6,7 @@ def value_to_float(x):
             return float(x.replace('K', '')) * 1000
         return 1000
     return 0.0
-    
+
+def convert_to_list(x):
+    new_list = x.strip('\'[ ]').split('\', \'')
+    return new_list
