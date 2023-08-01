@@ -24,3 +24,10 @@ def count_values(list_to_count):
                 split_genres[key] += 1
     sort_genres = dict(sorted(split_genres.items(), key = lambda x: x[1], reverse= False))
     return sort_genres
+
+def convert_feature(clf):
+    feature_list = []
+    for name, value in zip(clf.feature_names_in_, clf.feature_importances_):
+        feature_list.append((name, round(value*100, 2)))
+    feature_list = sorted(feature_list, key= lambda x: x[1])
+    return feature_list
