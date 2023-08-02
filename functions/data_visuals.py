@@ -1,7 +1,14 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def visual_baseline(x, y, x_2, y_2):
+def visual_baseline(list_1, list_2):
+    
+    
+    x = [x[0] for x in list_1]
+    y = [x[1] for x in list_1]
+
+    x_2 = [x[0] for x in list_2]
+    y_2 = [x[1] for x in list_2]
     
     fig, ax = plt.subplots(ncols= 2,figsize = (25,8))
     ax[0].barh(x, y)
@@ -20,8 +27,15 @@ def visual_baseline(x, y, x_2, y_2):
     ax[1].set_ylabel('Genres');
     ax[1].set_xlabel('Percentage');
     
-def visual_top_5(x, y, x_2, y_2):
+def visual_top_5(list_1, list_2):
    
+    x = [x[0] for x in list_1]
+    y = [x[1] for x in list_1]
+
+    x_2 = [x[0] for x in list_2]
+    y_2 = [x[1] for x in list_2] 
+
+
     fig,ax = plt.subplots(ncols= 2, figsize = (20, 5))
 
     xlabel = ['{}%'.format(x) for x in np.arange(0,14,2)]
