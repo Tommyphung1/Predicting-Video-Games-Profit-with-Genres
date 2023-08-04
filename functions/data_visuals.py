@@ -36,7 +36,7 @@ def visual_top_5(list_1, list_2):
     y_2 = [x[1] for x in list_2] 
 
 
-    fig,ax = plt.subplots(ncols= 2, figsize = (20, 5))
+    fig,ax = plt.subplots(ncols= 2, figsize = (25, 5))
 
     xlabel = ['{}%'.format(x) for x in np.arange(0,14,2)]
     ax[0].barh(x[17:24], y[17:24])
