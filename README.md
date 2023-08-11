@@ -3,13 +3,13 @@
 **Target:** Video Game Developers
 
 ## Overview 
-With the increasing demand for video games, the market is primed and ready for investment and development. However, there isn't a hard and fast rule to make a great game much less a profitable one. There are many aspects to making video games and one of the most controllable features was the genre of the game. By narrowing down which genres are profitable, developers can focus on making the correct games when concerning profit. The best place to look is the community website, backloggd to get a better idea of what people actually like. 
+With the increasing demand for video games, the market is primed and ready for investment and development. However, there isn't a hard and fast rule to make a great game much less a profitable one. There are many aspects to making video games and one of the most controllable features was the genre of the game. By narrowing down which genres are profitable, developers can focus on making the correct games when concerning profit. To get a better idea of what people like I used the community website, Backloggd. 
 
-It turns out that some of the most common genre happens to be profitable as well. This doesn't necessarily help since Adventure and RPG are common genres to have in games. Indie genres or Indie game shows are one of the best genres to have when making a game. Setting aside the Indie genre, I can isolate which genres are good when modeling. Indie developers can stick to popular features mentioned before but can also consider arcade and strategy in their games as well. Keeping Adventure and RPG will keep the games relatively safe to make while enhancing a mixture of the suggested genres. 
+It turns out that some of the most common genre happens to be profitable as well. This doesn't necessarily help since Adventure and RPG are common genres to have in games. Indie genres or Indie games are one of the best genres to have when making a game. Setting aside the Indie genre, I can isolate which genres are good when modeling. Indie developers can stick to popular features mentioned before but can also consider arcade and strategy in their games as well. Keeping Adventure and RPG will keep the games relatively safe to make while enhancing them with a mixture of the suggested genres. 
 
 When moving the threshold of success for more developed companies was a bit more complicated. The first model shows similar results to the Indie Model with Simulator and Puzzle as important genres to focus on. However, when rebalancing the dataset, brawler came up as an important feature. If a company wants to explore brawlers, this could be a fruitful endeavor due to the low quality of brawler-based games. Rebalancing doesn't seem to change the results but other features should be looked at such as developer since the rebalanced model performed poorly. 
 
-The produce models perform best when considering a lower threshold and should only be used for Indie Developers. More data is needed to help determine better genres for higher sales or more analysis is needed to help the model. 
+The produced models perform best when considering a lower threshold and should only be used for Indie Developers. More data is needed to help determine better genres for higher sales or more analysis is needed to help the model.  
 
 ## Business Understanding 
 Video games have been a form of entertainment for all ages around the world. There has been **an increase in game production** with all the access to tools online as well as the demand for these games especially for the last couple of years of quarantine. <br>
@@ -37,20 +37,6 @@ The majority of the games were not included due to different name changes or non
 | **# of Games** | 60,000 | 16,598 | **4,466** |
 | **Desired Feature** | Genres | Global Sales | **N/A** |
 | **# of Columns** | 12 | 10 | **6** |
-
-## Data Preparations
-To begin, multiple libraries were imported into the notebook for training, testing, and visualization. I created some functions to reduce the clutter made from all the visualizations. <br>
-The majority of the libraries came from Sklearn to complete most of the modeling and testing. 
-
-The datasets didn't have missing values with the features I was concerned with. There was some data formatting that needed to be done before any analysis was possible.<br>
-A metric was also needed to determine a game's success. Overall, a game was considered profitable if it sold over 1 million units or 100,000 if they were an indie or independent developer. When referring to the threshold of profit, I will use old or older for 1 million and 100,000 for newer indie developers. 
-These were the step taken to obtain the final dataframe to begin modeling.
-1. All of the datasets were imported 
-2. The game titles that matched all the datasets were the only ones used. 
-3. The columns were Rating, Genres, Global_Sale, and Title. 
-4. The column, Genres, were changed to an actual list of the game's genres. 
-5. Any duplicate titles were combined if applicable. 
-6. Based on the Global_Sales, two new columns were added to the dataframe to indicate profit. 
 
 ## Data Distribution
 There are **24 genres** with the most common being **Adventure, Indie, RPG, Shooter, and Puzzle**. <br>
@@ -110,8 +96,18 @@ After balancing and resampling the training set to get a more even distribution,
 | 4 | **Arcade** | Adventure | **Strategy** |
 | 5 | Simulator | RPG | Fighting |
 
-## Recommendations
+## Analysis
+### Developed Companies
+When looking over video games that made over 1 million in sales, the best genres to have **adventure, RPG, simulator, and strategy games**. Since there is a **saturation** of **Adventure and RPG**, strategy and simulator games would be best to make games that people would buy. This may be due to that most games pair these genres together so it would best to avoid these genres unless known for the genre themselves. Keep in mind that fewer games may also mean that most audiences may not be looking for that specific genre at all which may limit others to play. The desirable result would be able to make a game that encompasses multiple genres like adding **strategy in their adventure games** or **shooter platformers**. 
+### Indie Developers Recommendations
+When looking at the idea of indie developers in mind, there is a slight change in mindset. Indie games have two choices in making a game, make a unique game and define the genre they planned with their game, or go to a niche area that has little to no competition to the genre instead. There seems to be a **great deal of interest in indie games** as a whole, being consistently the **most important genre** in making **over 100,000 in sales**. 
+If the goal is to start making games, it would be safe to stick with the games in the top feature importance to increase the chances of a good game. Once a genre of games proves to be the best, the best advice would be to continue to make the games define themselves to that genre. Most people won't expect anything so striking with the **common genres would be safest**. 
 
+When looking at feature importance when looking at the games labeled with Indie, there was a drastic shift in what the model determined as important. It appeared that **RPG and Arcade** performed the **best for both** the thresholds meaning that the most successful indie games were with these genres. Other good genres were a variety of **platformers, simulators, visual novels, adventure, and fighting**. Given how Indie games usually varies, sticking the RPGs and Arcade style games would be **best for new developers**.
+### Balanced Analysis
+After balancing and resampling the training set to get a more even distribution, there was a slight change. Although the majority of the genres stayed the same, two genres stood out even though they were uncommon based on other metrics. **Brawler and Fighting** seemed to perform well depending on the model and should be explored. **This may be too risky for indie developers** due to the smaller pool of games and the lower accuracy of the model but **could be beneficial for older developers** in creating these type of games. 
+
+## Recommendations
 **Triple-A Developer**: <br>
 **Safe genres** to make are **Adventure and RPG** due to their reliability in the gaming market. <br>
 Add **puzzles and simulators** for added variety in games to increase performance.
@@ -120,10 +116,25 @@ Add **puzzles and simulators** for added variety in games to increase performanc
 Avoid uncommon genres and stick to common genres. **Adventure and RPG** are safe as well along with **platformer and shooters**. <br>
 Adding **Strategy or Acade** in their game would increase the likelihood of performing well. 
 
-Next Step
-1. Add developer and publisher to the model. 
-There are potential markers that may prove to be a huge factor in making a profitable game. 
-2. More games
-There were a lot of games that weren't added to the final dataframe due to the title not matching perfectly and it would take too much time to individually look and see why that would be the case. More data would ideally lead to better modeling. 
-3. Determine trends in genres
-Throughout history, there have been trends that I have noticed from game developers making similar styles of games. Some example from the top of my head was the MOBA, Open World, and Battle Royal trend in most recent years where they were extremely popular and widely made even poorly. 
+## Next Step
+1. **Add developer and publisher to the model**. There are **potential markers** that may prove to be a huge factor in making a profitable game.  <br>
+2. **Add more existing games into the dataset when modeling**. There were a lot of games that weren't added to the final dataframe due to the title not matching perfectly and it would take too much time to individually look and see why that would be the case. More data would ideally lead to better modeling, especially for the modeling of games with over 1 million units in sales.  
+3. **Determine trends in genres for each year.** Throughout history, there have been trends that I have noticed from game developers making similar styles of games. Some example from the top of my head was the MOBA, Open World, and Battle Royal trend in most recent years where they were extremely popular and widely made even poorly. 
+
+## For More Information
+Please review our full analysis in Jupyter Notebook or the presentation.
+
+For any additional questions, please contact Tommy Phung, phungtommy109@gmail.com
+
+## Repository Structure
+
+├── README.md                           <- The top-level README for reviewers of this project
+├── Final_Notebook.ipynb                <- Narrative documentation of analysis in Jupyter notebook
+├── Project_5_Final_Presentation.pdf    <- PDF version of project presentation
+├── functions
+│   ├── __init__.py                     <- .py file that signals to python these folders contain packages
+│   ├── visualizations.py               <- .py script to create finalized versions of visuals for the project
+│   ├── data_preparation.py             <- .py script used to pre-process and clean data
+│   └── eda_notebook.ipynb              <- Notebook containing data exploration
+├── picture                             <- Graphs and plots created by code
+└── ZippedData                          <- Original Code from Websites

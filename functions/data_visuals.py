@@ -2,7 +2,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def visual_baseline(list_1, list_2):
-    
+    '''
+    Input: List_1, list_2 - lists
+    Output: BarH graphs
+    Take two lists and visualize as bar graphs.
+    Both lists have names and values and needs to be seperated from each other. 
+    '''
     
     x = [x[0] for x in list_1]
     y = [x[1] for x in list_1]
@@ -28,7 +33,13 @@ def visual_baseline(list_1, list_2):
     ax[1].set_xlabel('Percentage');
     
 def visual_top_5(list_1, list_2):
-   
+    '''
+    Input: List_1, list_2 - lists
+    Output: BarH graphs
+    Take two lists and visualize as bar graphs.
+    Both lists have names and values and needs to be seperated from each other. 
+    Only display the top 6 genres 
+    '''
     x = [x[0] for x in list_1]
     y = [x[1] for x in list_1]
 
@@ -49,9 +60,7 @@ def visual_top_5(list_1, list_2):
 
     for i, v in enumerate(y[17:24]):
         ax[0].text(v + .2, i, str(v) + '%', color='blue', fontweight='bold')
-
-
-    
+        
     ax[1].barh(x_2[17:24], y_2[17:24])
     ax[1].set_title('Feature Importance - Indie')
     ax[1].set_xticks(np.arange(0,14,2));
