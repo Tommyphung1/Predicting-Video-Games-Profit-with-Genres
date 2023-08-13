@@ -8,7 +8,7 @@ Two datasets from Backloggd and Kaggle are combined using video game **genres** 
 ![Video Games](pictures/most-popular-video-games-of-2022-1642612227.png)
 
 ## Overview 
- However, there isn't a hard and fast rule to make a great game much less a profitable one. There are many aspects to making video games and one of the most controllable features was the genre of the game. By narrowing down which genres are profitable, developers can focus on making the games with the best chances in success.
+There are many aspects to making video games and one of the most controllable features was the genre of the game. By narrowing down which genres are profitable, developers can focus on making the games with the best chances in success.
 
 Genres are interpreted from the users and can attract players from perchasing the game. It turns out that some of the most common genre happens to be profitable as well. This doesn't necessarily help since Adventure and RPG are common genres to have in games. Indie genres or Indie games are one of the best genres to have when making a game. Setting aside the Indie genre, I can isolate which genres are good when modeling. Indie developers can stick to popular features mentioned before but can also consider arcade and strategy in their games as well. Keeping Adventure and RPG will keep the games relatively safe to make while enhancing them with a mixture of the suggested genres. 
 
