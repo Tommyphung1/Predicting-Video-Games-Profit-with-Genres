@@ -1,18 +1,23 @@
-# Project 5
+# Prediciting Video Games Success with Genres using Decision Trees
 **Author:** Tommy Phung <br>
 **Target:** Video Game Developers
 
-## Overview 
-With the increasing demand for video games, the market is primed and ready for investment and development. However, there isn't a hard and fast rule to make a great game much less a profitable one. There are many aspects to making video games and one of the most controllable features was the genre of the game. By narrowing down which genres are profitable, developers can focus on making the correct games when concerning profit. To get a better idea of what people like I used the community website, Backloggd. 
+With the increasing demand for video games, the market is primed and ready for investment and development. 
+Two datasets from Backloggd and Kaggle are combined using video game **genres** and **Global_Sales** as the features to determine the success of a game. Custom indicators, **Over_1 and Over_.1** tell whether or not video games have produced **over 1 million units** or **100,000 units of sales** as a sign of success. The best indie model using **Random Forest** had an **accuracy of 78.51%** and an** F1-Score of .88.** The best-developed model with a balance training set has a **62.13% accuracy** and a **.41 F1-Score**. The model can **accurately predict games over 100,000 sales** but **struggles** to predict games **over 1 million** as its threshold. 
 
-It turns out that some of the most common genre happens to be profitable as well. This doesn't necessarily help since Adventure and RPG are common genres to have in games. Indie genres or Indie games are one of the best genres to have when making a game. Setting aside the Indie genre, I can isolate which genres are good when modeling. Indie developers can stick to popular features mentioned before but can also consider arcade and strategy in their games as well. Keeping Adventure and RPG will keep the games relatively safe to make while enhancing them with a mixture of the suggested genres. 
+![Video Games](pictures/most-popular-video-games-of-2022-1642612227.png)
+
+## Overview 
+ However, there isn't a hard and fast rule to make a great game much less a profitable one. There are many aspects to making video games and one of the most controllable features was the genre of the game. By narrowing down which genres are profitable, developers can focus on making the games with the best chances in success.
+
+Genres are interpreted from the users and can attract players from perchasing the game. It turns out that some of the most common genre happens to be profitable as well. This doesn't necessarily help since Adventure and RPG are common genres to have in games. Indie genres or Indie games are one of the best genres to have when making a game. Setting aside the Indie genre, I can isolate which genres are good when modeling. Indie developers can stick to popular features mentioned before but can also consider arcade and strategy in their games as well. Keeping Adventure and RPG will keep the games relatively safe to make while enhancing them with a mixture of the suggested genres. 
 
 When moving the threshold of success for more developed companies was a bit more complicated. The first model shows similar results to the Indie Model with Simulator and Puzzle as important genres to focus on. However, when rebalancing the dataset, brawler came up as an important feature. If a company wants to explore brawlers, this could be a fruitful endeavor due to the low quality of brawler-based games. Rebalancing doesn't seem to change the results but other features should be looked at such as developer since the rebalanced model performed poorly. 
 
 The produced models perform best when considering a lower threshold and should only be used for Indie Developers. More data is needed to help determine better genres for higher sales or more analysis is needed to help the model.  
 
 ## Business Understanding 
-Video games have been a form of entertainment for all ages around the world. There has been **an increase in game production** with all the access to tools online as well as the demand for these games especially for the last couple of years of quarantine. <br>
+Video games have been a form of entertainment for all ages around the world. [There has been **an increase in game production** with all the access to tools online as well as the demand for these games especially for the last couple of years of quarantine.](https://www.pwc.com/gx/en/industries/tmt/media/outlook/insights-and-perspectives.html) <br>
 Every year, **Steam**, one of the largest online video game platforms, has **300 games** on average published a day and this has only been increasing in the past decade.  
 With so many games getting published, there is **a risk that the game won't be made profitable**. <br>
 
@@ -38,7 +43,6 @@ The majority of the games were not included due to different name changes or non
 | **Desired Feature** | Genres | Global Sales | **N/A** |
 | **# of Columns** | 12 | 10 | **6** |
 
-## Data Distribution
 There are **24 genres** with the most common being **Adventure, Indie, RPG, Shooter, and Puzzle**. <br>
 [Class Inbalance](http://localhost:8888/lab/tree/pictures/Class%20Distributions%20Both.JPG)
 There are clear imbalances in games that perform well based on the threshold given. This could prove troublesome when modeling and would need to be rebalanced to get ideally better results. 
@@ -78,6 +82,8 @@ SMOTE was used to oversample the dataset and the panda built-in resampling metho
 
 After balancing and resampling the training set to get a more even distribution, there was a slight change. Although the majority of the genres stayed the same, two genres stood out even though they were uncommon based on other metrics. Brawler and Fighting seemed to perform well depending on the model and should be explored. This may be too risky for indie developers due to the smaller pool of games and the lower accuracy of the model but could be beneficial for old-known developers in creating the said type of games. 
 
+It is unclear whether or not the dataset needed rebalancing or whether the distribution was inevitable. The [oversampling](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-018-0151-6) was most likely an introduced bias from the synthetically made data, which resulted in greater importance to Brawler.
+
 ### Old Model Threshold
 | Rank | Baseline | Random Forest |
 |:---:|:---:|:---:|
@@ -116,13 +122,15 @@ Add **puzzles and simulators** for added variety in games to increase performanc
 Avoid uncommon genres and stick to common genres. **Adventure and RPG** are safe as well along with **platformer and shooters**. <br>
 Adding **Strategy or Acade** in their game would increase the likelihood of performing well. 
 
+Developers should use this model to get an idea of possible genres to add to their games and continue to experiment with different combinations. It is safe to interpret the results as using the top 5 genres, avoiding the last 5, and considering genres in between.
+
 ## Next Step
 1. **Add developer and publisher to the model**. There are **potential markers** that may prove to be a huge factor in making a profitable game.  <br>
 2. **Add more existing games into the dataset when modeling**. There were a lot of games that weren't added to the final dataframe due to the title not matching perfectly and it would take too much time to individually look and see why that would be the case. More data would ideally lead to better modeling, especially for the modeling of games with over 1 million units in sales.  
 3. **Determine trends in genres for each year.** Throughout history, there have been trends that I have noticed from game developers making similar styles of games. Some example from the top of my head was the MOBA, Open World, and Battle Royal trend in most recent years where they were extremely popular and widely made even poorly. 
 
 ## For More Information
-Please review our full analysis in Jupyter Notebook or the presentation.
+Please review our full analysis in [Jupyter Notebook](https://github.com/Tommyphung1/Project_5/blob/master/Final_Notebook.ipynb) or the [presentation](https://github.com/Tommyphung1/Project_5/blob/master/Project%205%20Final%20Presentation.pdf).
 
 For any additional questions, please contact Tommy Phung, phungtommy109@gmail.com
 
