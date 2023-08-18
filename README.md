@@ -44,13 +44,13 @@ Since I am using both datasets, they **need to match** with one another to analy
 | **# of Columns** | 12 | 10 | **6** |
 
 There are **24 genres** with the most common being **Adventure, Indie, RPG, Shooter, and Puzzle**. <br>
-![Class Inbalance](pictures/Class_Distributions_Both.JPG)
+![Class Inbalance](https://github.com/Tommyphung1/Project_5/blob/74b294f230d9e860e6813cb8aa0bc238053bf535/pictures/Class_Distributions_Both.JPG)
 There are clear imbalances in games that perform well based on the threshold given. This could prove troublesome when modeling and would need to be rebalanced to get ideally better results. 
 
-![Ratings](pictures/Rating_Distribution.JPG)
+![Ratings](https://github.com/Tommyphung1/Project_5/blob/74b294f230d9e860e6813cb8aa0bc238053bf535/pictures/Rating_Distribution.JPG)
 When looking at the Ratings for the games, there is a **normal distribution** which indicates that there is an even number of bad and good games in the list. 
 
-![Genre](pictures/Genres_Distribution.JPG)
+![Genre](https://github.com/Tommyphung1/Project_5/blob/74b294f230d9e860e6813cb8aa0bc238053bf535/pictures/Genres_Distribution.JPG)
 Unsurprisingly, **adventure** was the most common genre in the dataset having roughly **2,500** with this tag, followed by **RGP, Indie, Shooter, and Platform**. <br>
 Due to the number of games with these genres, we can expect that most of the profitable games would have **similar genres**.
 
