@@ -156,11 +156,9 @@ For any additional questions, please contact Tommy Phung, phungtommy109@gmail.co
 ├── README.md                           <- The top-level README for reviewers of this project
 ├── Final_Notebook.ipynb                <- Narrative documentation of analysis in Jupyter notebook
 ├── Project_5_Final_Presentation.pdf    <- PDF version of project presentation
-├── functions
-│   ├── __init__.py                     <- .py file that signals to python these folders contain packages
-│   ├── visualizations.py               <- .py script to create finalized versions of visuals for the project
-│   ├── data_preparation.py             <- .py script used to pre-process and clean data
-│   └── eda_notebook.ipynb              <- Notebook containing data exploration
-├── picture                             <- Graphs and plots created by code
-└── ZippedData                          <- Original Code from Websites
+├── Data_Explorations.ipynb             <- Notebook containing data exploration
+├── pictures                            <- Graphs and plots created by code
+└── functions
+│   ├── data_cleaning                   <- .py script to help clean datasets
+│   └── data_visuals.py                 <- .py script used to pre-process and clean data
 ```
