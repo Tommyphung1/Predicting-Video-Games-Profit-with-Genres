@@ -146,6 +146,15 @@ There were a lot of games that weren't added to the final dataframe due to the t
 
 Throughout history, there have been trends that I have noticed from game developers making similar styles of games. Some examples are **MOBA, Open World, and Battle Royal** trends were in the height of popularity and production. 
 
+## Future Plans
+Two different attempts were explored when coding this project. My initial idea was to **relate genres** to a **good user rating** which should result in a **good amount of sales or popularity**. Before finishing, the previous model performed poorly or didn't give me the insight to determine a good versus bad genre. 
+
+The second was to explore a more advanced algorithm that was not in my mental domain. I tried my hand on **Light GBM** which uses a tree-based algorithm as well to determine importance. Below is some sample code and results that could be interesting to explore once learned. Light GBM is potentially useful since it uses **leaf-based split** which is new to any algorithm I have tried. 
+
+More information can be found here:
+[Light GBM](https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.LGBMRegressor.html) - Different algorithm
+[Multiple Outputs](https://scikit-learn.org/stable/modules/multiclass.html#multiclass) - Differences to multple outputs and input and their apporitiate modeling suggestions. 
+
 ## For More Information
 Please review our full analysis in [Jupyter Notebook](https://github.com/Tommyphung1/Project_5/blob/master/Final_Notebook.ipynb) or the [presentation](https://github.com/Tommyphung1/Project_5/blob/master/Project%205%20Final%20Presentation.pdf).
 
