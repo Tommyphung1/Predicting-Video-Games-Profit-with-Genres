@@ -11,3 +11,5 @@ Instruction for importing functions to Google Colab are commented in the Noteboo
 Functions were used mainly to visualize the data for results. Other functions ain't necessary to create the model and can be run without them. The models used have built in method to help obtain the feature importance that was presneted in the project. [Decision Tree](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html) and [Random Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier) mehtods can be found in there corresponding links. 
 
 Note: Notebook was setup with dataset in the a seperate folder. Repath the import to the location. If using default directory, use 
+df = pd.read_csv('/content/backloggd_games.csv')    ### Main dataset with the genres.
+ranked_df = pd.read_csv('/content/vgsales.csv')     ### Dataset to grab global sales from. 
