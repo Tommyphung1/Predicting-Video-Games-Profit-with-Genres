@@ -45,12 +45,15 @@ Since I am using both datasets, they **need to match** with one another to analy
 
 There are **24 genres** with the most common being **Adventure, Indie, RPG, Shooter, and Puzzle**. <br>
 ![Class Inbalance](https://github.com/Tommyphung1/Project_5/blob/74b294f230d9e860e6813cb8aa0bc238053bf535/pictures/Class_Distributions_Both.JPG)
+
 There are clear imbalances in games that perform well based on the threshold given. This could prove troublesome when modeling and would need to be rebalanced to get ideally better results. 
 
 ![Ratings](https://github.com/Tommyphung1/Project_5/blob/74b294f230d9e860e6813cb8aa0bc238053bf535/pictures/Rating_Distribution.JPG)
+
 When looking at the Ratings for the games, there is a **normal distribution** which indicates that there is an even number of bad and good games in the list. 
 
 ![Genre](https://github.com/Tommyphung1/Project_5/blob/74b294f230d9e860e6813cb8aa0bc238053bf535/pictures/Genres_Distribution.JPG)
+
 Unsurprisingly, **adventure** was the most common genre in the dataset having roughly **2,500** with this tag, followed by **RGP, Indie, Shooter, and Platform**. <br>
 Due to the number of games with these genres, we can expect that most of the profitable games would have **similar genres**.
 
@@ -115,7 +118,7 @@ When looking at the idea of indie developers in mind, there is a slight change i
 
 If the goal is to start making games, it would be safe to stick with the games in the top feature importance to increase the chances of a good game. Once a genre of games proves to be the best, the best advice would be to continue to make the games define themselves to that genre. Most people won't expect anything so striking with the **common genres would be safest**. 
 
-When looking at feature importance when looking at the games labeled with Indie, there was a drastic shift in what the model determined as important. It appeared that **RPG and Arcade** performed the **best for both** the thresholds meaning that the most successful indie games were with these genres. Other good genres were a variety of **platformers, simulators, visual novels, adventure, and fighting**. Given how Indie games usually varies, sticking the RPGs and Arcade style games would be **best for new developers**.
+When looking at feature importance when looking at the games labeled with Indie, there was a drastic shift in what the model determined as important. It appeared that **RPG and Arcade** performed the **best for both** the thresholds meaning that the most successful indie games were with these genres. Other good genres were a variety of **platformers, simulators, visual novels, adventure, and fighting**. Given how Indie games usually vary, sticking the RPGs and Arcade style games would be **best for new developers**.
 ### Balanced Analysis
 After balancing and resampling the training set to get a more even distribution, there was a slight change. Although the majority of the genres stayed the same, two genres stood out even though they were uncommon based on other metrics. **Brawler and Fighting** seemed to perform well depending on the model and should be explored. **This may be too risky for indie developers** due to the smaller pool of games and the lower accuracy of the model but **could be beneficial for older developers** in creating these type of games. 
 
@@ -153,10 +156,10 @@ The second was to explore a more advanced algorithm that was not in my mental do
 
 More information can be found here:
 [Light GBM](https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.LGBMRegressor.html) - Different algorithm
-[Multiple Outputs](https://scikit-learn.org/stable/modules/multiclass.html#multiclass) - Differences to multple outputs and input and their apporitiate modeling suggestions. 
+[Multiple Outputs](https://scikit-learn.org/stable/modules/multiclass.html#multiclass) - Differences to multiple outputs and input and their appropriate modeling suggestions. 
 
 ## For More Information
-Please review our full analysis in [Jupyter Notebook](https://github.com/Tommyphung1/Project_5/blob/master/Final_Notebook.ipynb) or the [presentation](https://github.com/Tommyphung1/Project_5/blob/master/Project%205%20Final%20Presentation.pdf).
+Please review our full analysis in [Jupyter Notebook](https://github.com/Tommyphung1/Project_5/blob/master/Final_Notebook.ipynb) or the [presentation](https://github.com/Tommyphung1/Project_5/blob/master/Project%205%20Final%20Presentation_2.pdf).
 
 For any additional questions, please contact Tommy Phung, phungtommy109@gmail.com
 
