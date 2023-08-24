@@ -178,7 +178,7 @@ For any additional questions, please contact Tommy Phung, phungtommy109@gmail.co
 ```
 ├── README.md                           <- The top-level README for reviewers of this project
 ├── Final_Notebook.ipynb                <- Narrative documentation of analysis in Jupyter notebook
-├── Project_5_Final_Presentation.pdf    <- PDF version of project presentation
+├── Project_5_Final_Presentation_3.pdf    <- PDF version of project presentation
 ├── Data_Explorations.ipynb             <- Notebook containing data exploration
 ├── pictures                            <- Graphs and plots created by code
 └── functions
