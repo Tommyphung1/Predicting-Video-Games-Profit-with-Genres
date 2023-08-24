@@ -81,6 +81,17 @@ When looking at feature importance when looking at the **games labeled with Indi
 | 4 | **Puzzle** | **Strategy** |
 | 5 | Platform | **Arcade** |
 
+
+## Confusion Matrix 
+[Matrix](pictures/Confusion Matrix.JPG)
+
+True Postives - **Both** prediction and actual values are **true**.
+True Negatives - **Both** prediction and actual values are **negative**.
+False Positive - Model **predicts positive** but actual is **negative**.
+False Negative - Model **predicts negative** but actual is **positive**. 
+
+From the matrixes, we can see that there are many predictions that **asusme that the games were not successful**. This can be misleading when not considering that the model is **accurate** but **not for the right reasons**. If a model assume that all games are unsuccessful, the models recommendation are not useful or worst, misleading. For **false negatives**, the model would **ignore and rate potential genres worst** and would not be noticed. For **false positives**,the model could **recommend irrelavant genres**. It gets hard to know **which genres are truthfully** and which was **caused by error**. The model may benefit to a rebalanced dataset. 
+
 ## Class Imbalance Results
 Since the dataset has a major class imbalance, we need to model again with a more even dataset. The dataset is quite limited so I oversample by synthetically adding more data to the training set. 
 **SMOTE** was used to oversample the dataset and the **panda built-in resampling method** was to resample 50% of the new balanced dataset. 
